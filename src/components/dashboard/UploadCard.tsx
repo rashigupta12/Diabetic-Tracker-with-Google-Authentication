@@ -28,27 +28,19 @@ const CATEGORIES = {
   // "Stocks - NSE/BSE": []
 };
 
-interface StockSearchResult {
-  name: string;
-  ticker: string;
-  has_intraday: boolean;
-  has_eod: boolean;
-  stock_exchange: {
-    name: string;
-    acronym: string;
-    mic: string;
-  };
-}
+// interface StockSearchResult {
+//   name: string;
+//   ticker: string;
+//   has_intraday: boolean;
+//   has_eod: boolean;
+//   stock_exchange: {
+//     name: string;
+//     acronym: string;
+//     mic: string;
+//   };
+// }
 
-interface StockSearchResponse {
-  pagination: {
-    limit: number;
-    offset: number;
-    count: number;
-    total: number;
-  };
-  data: StockSearchResult[];
-}
+
 
 interface SelectedAsset {
   type: 'metal' | 'stock' | 'category';

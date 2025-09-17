@@ -1,10 +1,10 @@
-import { sessions, Session } from './../../../db/schema';
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // src/app/api/weight/route.ts
-import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@/db';
 import { weightReadings } from '@/db/schema';
-import { eq, desc, and, gte, lte } from 'drizzle-orm';
 import { auth } from '@/lib/auth';
+import { and, desc, eq, gte, lte } from 'drizzle-orm';
+import { NextRequest, NextResponse } from 'next/server';
 
 
 export async function GET(request: NextRequest) {

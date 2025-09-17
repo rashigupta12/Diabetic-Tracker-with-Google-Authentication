@@ -231,7 +231,7 @@ export default function SignUp() {
     try {
       await signIn("google", { callbackUrl: "/" });
     } catch (error) {
-      setError("Google sign in failed");
+      setError("Google sign in failed" + error);
       setIsLoading(false);
     }
   };

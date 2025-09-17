@@ -1,16 +1,15 @@
-import { Session } from './../../../../db/schema';
 // app/api/dashboard/stats/route.ts
-import { NextResponse } from 'next/server';
 import { db } from '@/db';
-import { 
-  bloodSugarReadings, 
-  medications, 
-  medicationLogs, 
-  weightReadings, 
-  bloodPressureReadings 
+import {
+  bloodPressureReadings,
+  bloodSugarReadings,
+  medicationLogs,
+  medications,
+  weightReadings
 } from '@/db/schema';
-import { eq, desc, and, gte, lt, count, avg, max, min } from 'drizzle-orm';
 import { auth } from '@/lib/auth';
+import { and, avg, count, desc, eq, gte, lt, max, min } from 'drizzle-orm';
+import { NextResponse } from 'next/server';
 
 
 export async function GET() {

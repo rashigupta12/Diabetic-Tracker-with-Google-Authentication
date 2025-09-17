@@ -1,18 +1,16 @@
 // components/dashboard/Sidebar.tsx
 "use client";
 
+import {
+  Calendar,
+  Droplets,
+  Heart,
+  Home,
+  Pill,
+  Weight
+} from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { 
-  Home, 
-  Droplets, 
-  Heart, 
-  Pill, 
-  Weight,
-  BarChart3,
-  Settings,
-  Calendar
-} from "lucide-react";
 
 const navigation = [
   { name: 'Dashboard', href: '/dashboard', icon: Home },

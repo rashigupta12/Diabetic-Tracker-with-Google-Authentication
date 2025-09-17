@@ -77,7 +77,7 @@ export const authConfig: NextAuthConfig = {
       }
       return session;
     },
-   async signIn({ user, account, profile }) {
+   async signIn({ user, account }) {
   if (account?.provider === "google") {
     try {
       // Check if user exists by email

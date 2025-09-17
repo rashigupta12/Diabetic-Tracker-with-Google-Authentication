@@ -31,7 +31,8 @@ export default function SignIn() {
         router.refresh();
       }
     } catch (error) {
-      setError("An error occurred. Please try again.");
+      
+      setError("An error occurred. Please try again." +error);
     } finally {
       setIsLoading(false);
     }
@@ -42,7 +43,7 @@ export default function SignIn() {
     try {
       await signIn("google", { callbackUrl: "/" });
     } catch (error) {
-      setError("Google sign in failed");
+      setError("Google sign in failed" + error);
       setIsLoading(false);
     }
   };

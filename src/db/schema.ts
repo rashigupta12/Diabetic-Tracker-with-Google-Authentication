@@ -1,5 +1,5 @@
-import { pgTable, serial, integer, timestamp, text, decimal, boolean, pgEnum, varchar, uniqueIndex } from 'drizzle-orm/pg-core';
 import { relations } from 'drizzle-orm';
+import { boolean, decimal, integer, pgEnum, pgTable, serial, text, timestamp, varchar } from 'drizzle-orm/pg-core';
 
 export const usersTable = pgTable("users", {
   id: integer().primaryKey().generatedAlwaysAsIdentity(),

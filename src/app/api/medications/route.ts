@@ -1,10 +1,10 @@
-import { sessions } from './../../../db/schema';
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // app/api/medications/route.ts
-import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@/db';
 import { medications } from '@/db/schema';
-import { eq, desc, and } from 'drizzle-orm';
 import { auth } from '@/lib/auth';
+import { and, desc, eq } from 'drizzle-orm';
+import { NextRequest, NextResponse } from 'next/server';
 
 
 export async function GET(request: NextRequest) {
